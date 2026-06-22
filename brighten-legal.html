@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ไบรท์เทน ลีเกิล</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#0a0e1a;color:#e2e8f0}
+a{text-decoration:none;color:inherit}
+
+/* สีหลักเปลี่ยนเป็นฟ้าตามโลโก้ */
+:root{
+  --blue:#1a8fd1;
+  --blue2:#3aaee8;
+  --dark:#0a0e1a;
+  --dark2:#111827;
+  --dark3:#1a2235;
+  --muted:#94a3b8;
+}
+
+nav{background:#0d1221;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(26,143,209,0.3);position:sticky;top:0;z-index:99}
+.logo{color:var(--blue);font-weight:700;font-size:1rem;letter-spacing:1px}
+.nav-btn{background:var(--blue);color:#fff;padding:8px 18px;border-radius:6px;font-weight:700;font-size:.85rem}
+
+.hero{padding:60px 20px;text-align:center;background:linear-gradient(180deg,#111827,#0a0e1a)}
+.badge{display:inline-block;border:1px solid var(--blue);color:var(--blue);padding:4px 14px;border-radius:50px;font-size:.75rem;margin-bottom:18px}
+.hero h1{font-size:1.9rem;line-height:1.3;margin-bottom:14px}
+.hero h1 span{color:var(--blue)}
+.hero p{color:var(--muted);margin-bottom:28px;font-size:.95rem}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:14px 30px;border-radius:8px;font-weight:700;font-size:1rem;margin-bottom:10px}
+.btn2{display:inline-block;border:1px solid var(--blue);color:var(--blue);padding:13px 28px;border-radius:8px;font-weight:600;font-size:.95rem;margin-left:10px}
+.stats{display:flex;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap}
+.stat-n{color:var(--blue);font-size:1.8rem;font-weight:700}
+.stat-l{color:var(--muted);font-size:.8rem}
+
+section{padding:60px 20px}
+.tag{text-align:center;color:var(--blue);font-size:.75rem;letter-spacing:2px;margin-bottom:8px}
+h2{text-align:center;font-size:1.5rem;margin-bottom:10px}
+.line{width:50px;height:3px;background:var(--blue);margin:0 auto 16px}
+.sub{text-align:center;color:var(--muted);font-size:.9rem;margin-bottom:36px}
+
+.about{background:#111827}
+.bio{background:#1a2235;border-radius:12px;padding:28px;margin-top:8px}
+.bio p{color:var(--muted);font-size:.9rem;margin-bottom:12px}
+.cred{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.cred-i{font-size:1.2rem;flex-shrink:0}
+.cred-t{color:var(--muted);font-size:.85rem}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#111827;border:1px solid rgba(26,143,209,0.2);border-radius:12px;padding:20px}
+.card-ic{font-size:1.8rem;margin-bottom:10px}
+.card h3{font-size:.95rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.8rem}
+
+.how{background:#111827}
+.steps{display:grid;gap:20px}
+.step{background:#1a2235;border-radius:12px;padding:22px;display:flex;gap:16px;align-items:flex-start}
+.step-n{width:42px;height:42px;border-radius:50%;border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:700;font-size:1.1rem;flex-shrink:0}
+.step h3{font-size:.95rem;margin-bottom:4px}
+.step p{color:var(--muted);font-size:.82rem}
+
+.testi{display:grid;gap:16px}
+.tc{background:#111827;border:1px solid rgba(26,143,209,0.2);border-radius:12px;padding:22px}
+.stars{color:var(--blue);margin-bottom:10px}
+.tc p{color:var(--muted);font-size:.85rem;font-style:italic;margin-bottom:14px}
+.au{display:flex;gap:10px;align-items:center}
+.av{width:38px;height:38px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.8rem;flex-shrink:0}
+.an{font-size:.88rem;font-weight:600}
+.ar{font-size:.75rem;color:var(--muted)}
+
+.cta{background:#111827;text-align:center;padding:60px 20px}
+.cta h2 span{color:var(--blue)}
+.cta p{color:var(--muted);margin-bottom:28px;font-size:.9rem}
+.contacts{display:grid;gap:12px;margin-top:28px}
+.cc{background:#0a0e1a;border:1px solid rgba(26,143,209,0.3);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:14px}
+.cc .ic{font-size:1.4rem}
+.cc small{color:var(--muted);font-size:.75rem;display:block}
+.cc strong{font-size:.95rem}
+
+footer{background:#0a0e1a;border-top:1px solid #ffffff11;padding:30px 20px;text-align:center}
+footer .fl{color:var(--blue);font-weight:700;margin-bottom:8px}
+footer .fa{color:var(--muted);font-size:.8rem;line-height:1.8;margin-bottom:8px}
+footer .fc{color:#64748b;font-size:.75rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <img src="https://i.postimg.cc/d3kz6qyV/Brighten.png" style="height:45px;object-fit:contain;">
+  <a href="#cta" class="nav-btn">นัดปรึกษา</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">ที่ปรึกษากฎหมายมืออาชีพ</div>
+  <h1>ปัญหากฎหมาย<br>เราช่วย<span>แก้ไข</span>ให้คุณ</h1>
+  <p>บริษัท ไบรท์เทน ลีเกิล จำกัด<br>ให้บริการที่ปรึกษากฎหมายครบวงจร</p>
+  <a href="#cta" class="btn">📅 นัดปรึกษา</a>
+  <a href="#services" class="btn2">ดูบริการ</a>
+  <div class="stats">
+    <div><div class="stat-n">500+</div><div class="stat-l">คดีที่ดูแลสำเร็จ</div></div>
+    <div><div class="stat-n">10+</div><div class="stat-l">ปีประสบการณ์</div></div>
+    <div><div class="stat-n">98%</div><div class="stat-l">ลูกค้าพึงพอใจ</div></div>
+  </div>
+</div>
+
+<section class="about">
+  <div class="tag">เกี่ยวกับเรา</div>
+  <h2>ทนายความที่คุณไว้วางใจได้</h2>
+  <div class="line"></div>
+  <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t39.30808-6/503751627_23945072088462822_4535513287878881365_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=MVbpz5ft2p4Q7kNvwFHoX-i&_nc_oc=AdpZLmqJSMBOj4H4-LLmMTytbebaYX3ARpdPr0GEoTIzdhwA9iFxTQkpZrOsvHtymDh7dZ7qHwk6B3Kwr1m4rvY1&_nc_zt=23&_nc_ht=scontent.fbkk13-2.fna&_nc_gid=bIA9eN6Q1N4UE4NWMFbgXg&_nc_ss=7b2a8&oh=00_Af0JRqGbuhBeDv7S2vWVw2fmifP6iJcHDRiVcUS6C-EPgA&oe=69F631CC" style="width:100%;border-radius:12px;margin-bottom:16px;object-fit:cover;max-height:300px;">
+  <div class="bio">
+    <p>บริษัท ไบรท์เทน ลีเกิล จำกัด ก่อตั้งขึ้นเพื่อให้บริการด้านกฎหมายอย่างมืออาชีพ เราเชื่อว่าทุกคนควรได้รับการดูแลด้านกฎหมายที่ดี ด้วยราคาที่เป็นธรรม</p>
+    <div class="cred"><div class="cred-i">🎓</div><div class="cred-t">ทนายความที่ได้รับใบอนุญาตจากสภาทนายความแห่งประเทศไทย</div></div>
+    <div class="cred"><div class="cred-i">⚖️</div><div class="cred-t">ประสบการณ์ด้านกฎหมายธุรกิจและคดีความมากกว่า 10 ปี</div></div>
+    <div class="cred"><div class="cred-i">🏆</div><div class="cred-t">ผู้เชี่ยวชาญด้านกฎหมายแพ่งและพาณิชย์</div></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="tag">บริการของเรา</div>
+  <h2>บริการด้านกฎหมายครบวงจร</h2>
+  <div class="line"></div>
+  <p class="sub">ดูแลทุกขั้นตอนอย่างละเอียดและรอบคอบ</p>
+  <div class="cards">
+    <div class="card"><div class="card-ic">🏢</div><h3>ที่ปรึกษาธุรกิจ</h3><p>จดทะเบียนบริษัท ร่างสัญญา กฎหมายองค์กร</p></div>
+    <div class="card"><div class="card-ic">⚖️</div><h3>ดำเนินคดีความ</h3><p>ว่าความในศาลทุกชั้น คดีแพ่ง คดีอาญา</p></div>
+    <div class="card"><div class="card-ic">📋</div><h3>ร่างสัญญา</h3><p>ร่างและตรวจสอบสัญญาทุกประเภท</p></div>
+    <div class="card"><div class="card-ic">🏠</div><h3>อสังหาริมทรัพย์</h3><p>ซื้อ-ขาย โอนกรรมสิทธิ์ ตรวจสอบโฉนด</p></div>
+    <div class="card"><div class="card-ic">👨‍👩‍👧</div><h3>กฎหมายครอบครัว</h3><p>หย่า มรดก พินัยกรรม</p></div>
+    <div class="card"><div class="card-ic">🤝</div><h3>ไกล่เกลี่ย</h3><p>เจรจาข้อพิพาทโดยไม่ต้องขึ้นศาล</p></div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="tag">ขั้นตอนการทำงาน</div>
+  <h2>เริ่มต้นง่ายๆ 3 ขั้นตอน</h2>
+  <div class="line"></div>
+  <br>
+  <div class="steps">
+    <div class="step"><div class="step-n">1</div><div><h3>เริ่มต้นปรึกษา</h3><p>โทรหาเราหรือนัดหมาย รับฟังปัญหาเบื้องต้นเพื่อประเมินสถานการณ์</p></div></div>
+    <div class="step"><div class="step-n">2</div><div><h3>วางแผนกลยุทธ์</h3><p>ทีมทนายวิเคราะห์คดีและวางแผนดำเนินการที่ดีที่สุด</p></div></div>
+    <div class="step"><div class="step-n">3</div><div><h3>ดำเนินการจนสำเร็จ</h3><p>เราดูแลทุกขั้นตอนแทนคุณ พร้อมรายงานความคืบหน้า</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="tag">รีวิวจากลูกค้า</div>
+  <h2>ลูกค้าพูดถึงเราอย่างไร</h2>
+  <div class="line"></div>
+  <br>
+  <div class="testi">
+    <div class="tc"><div class="stars">★★★★★</div><p>"ทีมไบรท์เทน ลีเกิล ช่วยดูแลคดีธุรกิจของเราได้อย่างยอดเยี่ยม มืออาชีพมาก ประทับใจมากครับ"</p><div class="au"><div class="av">สม</div><div><div class="an">คุณสมชาย วงศ์ทอง</div><div class="ar">เจ้าของกิจการ</div></div></div></div>
+    <div class="tc"><div class="stars">★★★★★</div><p>"ทนายที่นี่อธิบายทุกอย่างให้เข้าใจง่าย ดำเนินการได้รวดเร็วมาก ขอบคุณมากค่ะ"</p><div class="au"><div class="av">น</div><div><div class="an">คุณนภา รักษาดี</div><div class="ar">บุคคลทั่วไป</div></div></div></div>
+    <div class="tc"><div class="stars">★★★★★</div><p>"ใช้บริการมาหลายปี ไว้ใจได้มาก ราคายุติธรรม ทีมงานดูแลดีเยี่ยม แนะนำเลยครับ"</p><div class="au"><div class="av">วิ</div><div><div class="an">คุณวิชัย ประเสริฐกุล</div><div class="ar">ผู้บริหารบริษัท</div></div></div></div>
+  </div>
+</section>
+
+<section class="cta" id="cta">
+  <div class="tag">ติดต่อเรา</div>
+  <h2>พร้อมช่วยคุณ<span>แล้ววันนี้</span></h2>
+  <p>เราพร้อมรับฟังและหาทางออกที่ดีที่สุดให้คุณ</p>
+  <a href="tel:0876087865" class="btn">📞 โทรนัดปรึกษา</a>
+  <div class="contacts">
+    <a href="tel:0876087865" class="cc"><div class="ic">📱</div><div><small>โทรศัพท์</small><strong>087-608-7865</strong></div></a>
+    <a href="mailto:brightenlegal@gmail.com" class="cc"><div class="ic">✉️</div><div><small>อีเมล</small><strong>brightenlegal@gmail.com</strong></div></a>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">BRIGHTEN LEGAL</div>
+  <div class="fa">บริษัท ไบรท์เทน ลีเกิล จำกัด<br>55/344 สุขุมวิทพาร์ค มอเตอร์เวย์ หมู่ 4 ซอย10/1-2<br>ท่าสะอ้าน บางปะกง ฉะเชิงเทรา 24130<br>เลขประจำตัวผู้เสียภาษี: 0245568002701</div>
+  <div class="fc">© 2024 บริษัท ไบรท์เทน ลีเกิล จำกัด · สงวนลิขสิทธิ์</div>
+</footer>
+</body>
+</html>
